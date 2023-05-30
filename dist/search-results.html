@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><script src="/search-results.9647e020.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="/index.4717fcfd.css">
+    <link rel="stylesheet" href="/index.07fedde6.css">
+  </head>
+
+  <body>
+    <nav>
+      <div class="text-center">
+        <a href="/index.html">
+          <h1>
+            <span class="text-orange">Eat and Smile</span><sub class="fs-6">Recipe Finder</sub>
+          </h1>
+        </a>
+      </div>
+    </nav>
+    <main>
+      <section id="search">
+        <div class="container w-80 mt-3 mx-auto">
+          <form class="d-flex" role="search">
+            <input id="searchInput" class="form-control me-2" type="search" placeholder="Search for Food or Recipe" aria-label="Search">
+            <button id="searchResultButton" class="btn btn-outline-orange text-black" type="button">
+              Search
+            </button>
+          </form>
+        </div>
+      </section>
+      <section id="searchResults">
+        <div class="container d-flex justify-content-between align-items-center mb-4">
+          <h1 id="numOfResults"></h1>
+          <div class="dropdown">
+            <button class="btn btn-white dropdown-toggle text-black" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Sort by
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Breakfast</a></li>
+              <li><a class="dropdown-item" href="#">Brunch</a></li>
+              <li><a class="dropdown-item" href="#">Lunch/Dinner</a></li>
+              <li><a class="dropdown-item" href="#">Snack</a></li>
+              <li><a class="dropdown-item" href="#">Teatime</a></li>
+            </ul>
+          </div>
+        </div>
+        <div id="results" class="container mb-2">
+          <!-- render search results -->
+        </div>
+      </section>
+    </main>
+    <script src="/search-results.bb830d5e.js" defer=""></script>
+    <script src="/index.cc073436.js"></script>
+  </body>
+</html>

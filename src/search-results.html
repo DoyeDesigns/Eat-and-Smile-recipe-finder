@@ -12,10 +12,12 @@
   <body>
     <nav>
       <div class="text-center">
-        <h1>
-          <span class="text-orange">Eat and Smile</span
-          ><sub class="fs-6">Recipe Finder</sub>
-        </h1>
+        <a href="index.html">
+          <h1>
+            <span class="text-orange">Eat and Smile</span
+            ><sub class="fs-6">Recipe Finder</sub>
+          </h1>
+        </a>
       </div>
     </nav>
     <main>
@@ -41,7 +43,7 @@
       </section>
       <section id="searchResults">
         <div class="container d-flex justify-content-between align-items-center mb-4">
-          <h1>20 results</h1>
+          <h1 id="numOfResults"></h1>
           <div class="dropdown">
             <button
               class="btn btn-white dropdown-toggle text-black"
@@ -62,30 +64,10 @@
         </div>
         <div id="results" class="container mb-2">
           <!-- render search results -->
-          <div class="d-flex align-items-center bg-ash-color px-0 mb-3">
-            <img src="../images/Shake Shack's Culinary Director Shares Six Tips For Making Burgers At Home.jpeg" alt="burgers" width="55" height="61" class="image-fluid">
-            <p class="ms-3">American</p>
-          </div>
-          <div class="d-flex align-items-center bg-ash-color px-0 mb-3">
-            <img src="../images/Shake Shack's Culinary Director Shares Six Tips For Making Burgers At Home.jpeg" alt="burgers" width="55" height="61" class="image-fluid">
-            <p class="ms-3">American</p>
-          </div>
-          <div class="d-flex align-items-center bg-ash-color px-0 mb-3">
-            <img src="../images/Shake Shack's Culinary Director Shares Six Tips For Making Burgers At Home.jpeg" alt="burgers" width="55" height="61" class="image-fluid">
-            <p class="ms-3">American</p>
-          </div>
-          <div class="d-flex align-items-center bg-ash-color px-0 mb-3">
-            <img src="../images/Shake Shack's Culinary Director Shares Six Tips For Making Burgers At Home.jpeg" alt="burgers" width="55" height="61" class="image-fluid">
-            <p class="ms-3">American</p>
-          </div>
-          <div class="d-flex align-items-center bg-ash-color px-0 mb-3">
-            <img src="../images/Shake Shack's Culinary Director Shares Six Tips For Making Burgers At Home.jpeg" alt="burgers" width="55" height="61" class="image-fluid">
-            <p class="ms-3">American</p>
-          </div>
         </div>
       </section>
     </main>
-    <script type="module" src="/src/assets/js/main.js"></script>
+    <script type="module" src="/src/assets/js/search-results.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
   </body>
 </html>

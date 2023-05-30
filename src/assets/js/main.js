@@ -6,54 +6,53 @@ let discoverNew = document.getElementById('discover');
 import axios from "axios";
 
 // Function to handle search
-function performSearch(searchTerm) {
+// function performSearch(searchTerm) {
 
-  const options = {
-    method: 'GET',
-    url: `https://api.edamam.com/api/recipes/v2?type=public&q=${searchTerm}&app_id=8364506f&app_key=25208b6f52780cf1344c710f6a964801&random=true`
-  };
-  const searchData = async () => {
-    try {
-        const response = await axios(options);
+//   const options = {
+//     method: 'GET',
+//     url: `https://api.edamam.com/api/recipes/v2?type=public&q=${searchTerm}&app_id=8364506f&app_key=25208b6f52780cf1344c710f6a964801&random=true`
+//   };
+//   const searchData = async () => {
+//     try {
+//         const response = await axios(options);
 
-        function renderResults() {
-            response.data.hits.forEach(hit => {
-                searchResults.innerHTML += `
-                  <div class="d-flex align-items-center bg-ash-color px-0 mb-3">
-                    <img src="${hit.recipe.image}" alt="burgers" width="55" height="61" class="image-fluid">
-                    <p class="ms-3">${hit.recipe.label}</p>
-                  </div>
-                `
-            });
-        }
-        renderResults()
+//         function renderResults() {
+//             response.data.hits.forEach(hit => {
+//                 searchResults.innerHTML += `
+//                   <div class="d-flex align-items-center bg-ash-color px-0 mb-3">
+//                     <img src="${hit.recipe.image}" alt="burgers" width="55" height="61" class="image-fluid">
+//                     <p class="ms-3">${hit.recipe.label}</p>
+//                   </div>
+//                 `
+//             });
+//         }
+//         renderResults()
 
-        console.log(response.data);
-    } catch (error) {
-        console.error(error);
-    }
-  }
+//         console.log(response.data);
+//     } catch (error) {
+//         console.error(error);
+//     }
+//   }
 
-searchData()
+// searchData()
 
-  console.log('Performing search for:', searchTerm);
-  console.log(searchTerm)
-}
+//   console.log('Performing search for:', searchTerm);
+//   console.log(searchTerm)
+// }
 
-searchButton.addEventListener('click', (e) => {
-    e.preventDefault();
+searchButton.addEventListener('click', (event) => {
   const searchTerm = searchInput.value;  
   console.log('Search term:', searchTerm);
 
   localStorage.setItem('searchTerm', searchTerm);
-  if (searchTerm) {
-    console.log('Redirecting to search-results.html');
+  if (!searchTerm) {
+    // console.log('Redirecting to search-results.html');
     // window.location.replace('search-results.html?query=' + encodeURIComponent(searchTerm));
-    window.location.href = `search-results.html?query=${encodeURIComponent(searchTerm)}`;
-  } else {
+    // window.location.pathname = 'search-results.html';
+    event.preventDefault();
     alert('Please enter a search term');
-  }
-  performSearch(searchTerm);
+  } 
+  // performSearch(searchTerm);
 });
 
 // Rendering random food on page load in the discover new div
