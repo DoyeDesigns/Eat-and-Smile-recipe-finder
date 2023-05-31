@@ -1,29 +1,47 @@
-h1,h2,h3,h4,h5,h6,p {
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
 }
 
 .categories {
-    background-color: #EFEFEF;
+  background-color: #efefef;
 }
 
 .categories:hover {
-    cursor: pointer;
-    background-color: #EDBC00;
-    font-weight: 500;
+  cursor: pointer;
+  background-color: #edbc00;
+  font-weight: 500;
 }
 
 .items {
-    background-color: #EFEFEF;
+  background-color: #efefef;
 }
 
 .items:hover {
-    cursor: pointer;
-    background-color: #EDBC00;
-    font-weight: 500;
+  cursor: pointer;
+  background-color: #edbc00;
+  font-weight: 500;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+#procedure:hover,
+#ingredients:hover {
+  padding-bottom: 0.4375rem;
+  border-bottom: 0.1875rem solid black;
+}
+
+.active {
+  padding-bottom: 0.4375rem;
+  border: none;
+  border-bottom: 0.1875rem solid black;
 }

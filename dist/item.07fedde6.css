@@ -1,0 +1,42 @@
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+.categories {
+  background-color: #efefef;
+}
+
+.categories:hover {
+  cursor: pointer;
+  background-color: #edbc00;
+  font-weight: 500;
+}
+
+.items {
+  background-color: #efefef;
+}
+
+.items:hover {
+  cursor: pointer;
+  background-color: #edbc00;
+  font-weight: 500;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#procedure:hover, #ingredients:hover {
+  border-bottom: .1875rem solid #000;
+  padding-bottom: .4375rem;
+}
+
+.active {
+  border: none;
+  border-bottom: .1875rem solid #000;
+  padding-bottom: .4375rem;
+}
+
+/*# sourceMappingURL=item.07fedde6.css.map */

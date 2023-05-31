@@ -558,8 +558,6 @@ function hmrAccept(bundle, id) {
 
 },{}],"aFKZX":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-// const numOfItems = document.querySelectorAll(".items");
-// const openRecipes = document.querySelector(".items"); 
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 const searchResults = document.querySelector("#results");
@@ -582,7 +580,7 @@ let renderSearchResults = ()=>{
                     response.data.hits.forEach((hit, index)=>{
                         const itemElement = document.createElement("div");
                         itemElement.classList.add("item");
-                        itemElement.innerHTML = `<a href="view-item.html">
+                        itemElement.innerHTML = `<a href="item.html">
                   <div class="items d-flex align-items-center bg-ash-color px-0 mb-3 data-item-index="${index}"">
                     <img src="${hit.recipe.image}" alt="burgers" width="55" height="61" class="image-fluid">
                     <p class="ms-3">${hit.recipe.label}</p>
@@ -591,15 +589,14 @@ let renderSearchResults = ()=>{
                 `;
                         // Attaching the click event listener to each item element
                         itemElement.addEventListener("click", ()=>{
-                            // Access the exact array item using the index
-                            const clickedItem = response.data.hits[index];
+                            const clickedItem = response.data.hits[index]; // Access the exact array item using the index
+                            localStorage.setItem("clickedItem", JSON.stringify(clickedItem));
                             console.log("Clicked item:", clickedItem);
                         });
                         searchResults.appendChild(itemElement);
                     });
                 }
                 renderResults();
-            // console.log(responseData);
             } catch (error) {
                 console.error(error);
             }
@@ -623,7 +620,7 @@ function performSearch(searchTerm) {
                 response.data.hits.forEach((hit, index)=>{
                     const itemElement = document.createElement("div");
                     itemElement.classList.add("item");
-                    itemElement.innerHTML = `<a href="view-item.html">
+                    itemElement.innerHTML = `<a href="item.html">
                     <div class="items d-flex align-items-center px-0 mb-3 data-item-index="${index}"">
                       <img src="${hit.recipe.image}" alt="burgers" width="55" height="61" class="image-fluid">
                       <p class="ms-3">${hit.recipe.label}</p>
@@ -634,7 +631,7 @@ function performSearch(searchTerm) {
                     itemElement.addEventListener("click", ()=>{
                         // Accessing the exact array item using the index
                         const clickedItem = response.data.hits[index];
-                        localStorage.setItem("clickedItem", clickedItem);
+                        localStorage.setItem("clickedItem", JSON.stringify(clickedItem));
                         console.log("Clicked item:", clickedItem);
                     });
                     searchResults.appendChild(itemElement);

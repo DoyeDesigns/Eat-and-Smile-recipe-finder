@@ -4,7 +4,7 @@
   "description": "",
   "source": "./src/index.html",
   "scripts": {
-    "dev": "parcel",
+    "dev": "parcel ./src/item.html && parcel watch ./src/item.html",
     "build": "parcel build"
   },
   "keywords": [],
