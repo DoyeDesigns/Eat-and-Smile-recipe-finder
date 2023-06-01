@@ -564,6 +564,7 @@ const searchResults = document.querySelector("#results");
 const searchResultButton = document.querySelector("#searchResultButton");
 const numOfResults = document.querySelector("#numOfResults");
 const items = Array.from(results.querySelectorAll(".items"));
+const filters = document.querySelectorAll(".filter");
 // Render items on page load
 let renderSearchResults = ()=>{
     let searchTerm = localStorage.getItem("searchTerm");
@@ -576,6 +577,7 @@ let renderSearchResults = ()=>{
             try {
                 const response = await (0, _axiosDefault.default)(options);
                 const responseData = response.data;
+                localStorage.setItem("responseData", responseData);
                 function renderResults() {
                     response.data.hits.forEach((hit, index)=>{
                         const itemElement = document.createElement("div");
@@ -598,7 +600,7 @@ let renderSearchResults = ()=>{
                 }
                 renderResults();
             } catch (error) {
-                console.error(error);
+                console.log(error);
             }
         };
         searchData();
@@ -616,6 +618,7 @@ function performSearch(searchTerm) {
         try {
             const response = await (0, _axiosDefault.default)(options);
             const responseData = response.data;
+            localStorage.setItem("responseData", responseData);
             function renderResults() {
                 response.data.hits.forEach((hit, index)=>{
                     const itemElement = document.createElement("div");
@@ -660,6 +663,15 @@ const observer = new MutationObserver(()=>{
 });
 observer.observe(searchResults, {
     childList: true
+});
+// filters event listener
+filters.forEach((filter)=>{
+    filter.addEventListener("click", ()=>{
+        let foodData = localStorage.getItem("responseData");
+        console.log(foodData);
+    // if () {
+    // }
+    });
 });
 
 },{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["05id6","aFKZX"], "aFKZX", "parcelRequireac83")

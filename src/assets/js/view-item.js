@@ -12,7 +12,6 @@ const multi = document.querySelector("#multi");
 const healthLabels = document.querySelector("#healthLabels");
 const time = document.querySelector("#time");
 
-console.log(selectedItem);
 
 // To load selected meal
 function loadMeal() {
@@ -32,7 +31,7 @@ function loadMeal() {
   mealOrigin.innerHTML = `${selectedItem.recipe.cuisineType}`;
   mealTime.innerHTML = `${selectedItem.recipe.totalTime}`;
   timeForMeal.innerHTML = `${selectedItem.recipe.mealType}`;
-}
+};
 
 loadMeal();
 
@@ -41,7 +40,7 @@ ingredients.addEventListener("click", () => {
   if (!ingredients.classList.contains("active")) {
     ingredients.classList.add("active");
     procedure.classList.remove("active");
-  }
+  };
 
   multipurpose.innerHTML = ``;
   multi.innerHTML = "";
@@ -55,12 +54,12 @@ ingredients.addEventListener("click", () => {
   });
 });
 
-// To render procedure tp div#procedure
+// To render procedure to div#procedure
 procedure.addEventListener("click", () => {
   if (!procedure.classList.contains("active")) {
     procedure.classList.add("active");
     ingredients.classList.remove("active");
-  }
+  };
 
   multipurpose.innerHTML = ``;
   multi.innerHTML = `See how to prepare meal <a href="${selectedItem.recipe.url}" target="_blank" class="text-orange fw-bold">Here</a>`;
@@ -81,3 +80,9 @@ function show() {
   procedure.classList.add("active");
 }
 show();
+
+
+
+
+
+

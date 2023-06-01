@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="/src/assets/scss/main.scss" />
+    <link rel="stylesheet" href="/src/assets/css/style.css" />
+</head>
+<body>
+    <nav>
+        <div class="text-center mb-4">
+          <a href="index.html">
+            <h1>
+              <span class="text-orange">Eat and Smile</span
+              ><sub class="fs-6">Recipe Finder</sub>
+            </h1>
+          </a>
+        </div>
+      </nav>
+    <main>
+        <section>
+            <div class="container">
+                <h2 class="mb-3">Popular <span id='clickedCategory' class="text-orange"></span> Dishes</h2>
+
+                <div id="dishes">
+                    <!-- render dishes -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="/src/assets/js/category.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

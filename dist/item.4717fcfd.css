@@ -9614,6 +9614,10 @@ textarea.form-control-lg {
   width: 40% !important;
 }
 
+.w-45 {
+  width: 45% !important;
+}
+
 .w-60 {
   width: 60% !important;
 }

@@ -570,7 +570,6 @@ const procedure = document.querySelector("#procedure");
 const multi = document.querySelector("#multi");
 const healthLabels = document.querySelector("#healthLabels");
 const time = document.querySelector("#time");
-console.log(selectedItem);
 // To load selected meal
 function loadMeal() {
     // To check if the time to prepare the meal is available
@@ -602,7 +601,7 @@ ingredients.addEventListener("click", ()=>{
         `;
     });
 });
-// To render procedure tp div#procedure
+// To render procedure to div#procedure
 procedure.addEventListener("click", ()=>{
     if (!procedure.classList.contains("active")) {
         procedure.classList.add("active");

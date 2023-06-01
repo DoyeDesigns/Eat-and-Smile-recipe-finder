@@ -2,6 +2,7 @@ const searchResults = document.querySelector("#results");
 const searchResultButton = document.querySelector("#searchResultButton");
 const numOfResults = document.querySelector("#numOfResults");
 const items = Array.from(results.querySelectorAll(".items"));
+const filters = document.querySelectorAll('.filter');
 
 import axios from "axios";
 
@@ -18,6 +19,7 @@ let renderSearchResults = () => {
       try {
         const response = await axios(options);
         const responseData = response.data;
+        localStorage.setItem('responseData', responseData);
 
         function renderResults() {
           response.data.hits.forEach((hit, index) => {
@@ -43,7 +45,7 @@ let renderSearchResults = () => {
         }
         renderResults();
       } catch (error) {
-        console.error(error);
+        console.log(error);
       }
     };
 
@@ -64,6 +66,7 @@ function performSearch(searchTerm) {
     try {
       const response = await axios(options);
       const responseData = response.data;
+      localStorage.setItem('responseData', responseData);
 
       function renderResults() {
         response.data.hits.forEach((hit, index) => {
@@ -118,3 +121,14 @@ const observer = new MutationObserver(() => {
 });
 
 observer.observe(searchResults, { childList: true });
+
+// filters event listener
+filters.forEach(filter =>{
+  filter.addEventListener('click', () => {
+    let foodData = localStorage.getItem("responseData")
+    console.log(foodData)
+    // if () {
+      
+    // }
+  })
+})
