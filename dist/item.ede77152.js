@@ -577,7 +577,7 @@ function loadMeal() {
     else if (selectedItem.recipe.totalTime < 10) minTime.innerHTML = `${selectedItem.recipe.totalTime - 3}`;
     else if (selectedItem.recipe.totalTime < 45) minTime.innerHTML = `${selectedItem.recipe.totalTime - 5}`;
     else minTime.innerHTML = `${selectedItem.recipe.totalTime - 10}`;
-    mealImage.innerHTML = `<img src="${selectedItem.recipe.image}" alt="${selectedItem.recipe.label}" class="img-fluid">`;
+    mealImage.innerHTML = `<img src="${selectedItem.recipe.image}" alt="${selectedItem.recipe.label}" class="img-fluid w-100">`;
     mealName.innerHTML = `${selectedItem.recipe.label}`;
     mealOrigin.innerHTML = `${selectedItem.recipe.cuisineType}`;
     mealTime.innerHTML = `${selectedItem.recipe.totalTime}`;
