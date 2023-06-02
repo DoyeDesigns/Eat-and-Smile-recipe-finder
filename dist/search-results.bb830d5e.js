@@ -717,7 +717,7 @@ filters.forEach((filter)=>{
         } else console.log("array length cannot be less than 0");
     });
 });
-//when no match is found remove remove filter and render saved search results
+//when no match is found remove filter and render saved search results
 filterItem.addEventListener("click", ()=>{
     let foodData = JSON.parse(localStorage.getItem("responseData")); //saved search results
     searchResults.innerHTML = ``;

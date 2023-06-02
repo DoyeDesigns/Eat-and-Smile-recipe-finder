@@ -563,7 +563,9 @@ var _axiosDefault = parcelHelpers.interopDefault(_axios);
 const searchValue = localStorage.getItem("searchValue");
 const clickedCategory = document.querySelector("#clickedCategory");
 const dishes = document.querySelector("#dishes");
-console.log(searchValue);
+const filters = document.querySelectorAll(".filter");
+const filterItem = document.querySelector("#filterItem");
+const numOfResults = document.querySelector("#numOfResults");
 // Render items on page load
 let renderSearchResults = ()=>{
     clickedCategory.innerHTML = `${searchValue}`;
@@ -575,6 +577,8 @@ let renderSearchResults = ()=>{
         const searchData = async ()=>{
             try {
                 const response = await (0, _axiosDefault.default)(options);
+                const responseData = response.data;
+                localStorage.setItem("responseData", JSON.stringify(responseData));
                 function renderResults() {
                     response.data.hits.forEach((hit, index)=>{
                         const itemElement = document.createElement("div");
@@ -605,6 +609,92 @@ let renderSearchResults = ()=>{
     }
 };
 renderSearchResults();
+//to check number of rendered items
+const observer = new MutationObserver(()=>{
+    const numOfItems = document.querySelectorAll(".items").length;
+    if (numOfItems === 0 || numOfItems === 1) numOfResults.textContent = `${numOfItems} Result`;
+    else numOfResults.textContent = `${numOfItems} Results`;
+});
+observer.observe(dishes, {
+    childList: true
+});
+// filters event listener
+filters.forEach((filter)=>{
+    filter.addEventListener("click", (event)=>{
+        let filterValue = event.target.getAttribute("data-value"); //to get data-value of clicked filter
+        let foodData = JSON.parse(localStorage.getItem("responseData"));
+        const filteredResults = foodData.hits.filter((hit)=>hit.recipe.mealType[0] == filterValue);
+        dishes.innerHTML = ``;
+        if (filteredResults.length > 0) {
+            function renderfilterResults() {
+                filteredResults.forEach((filter, index)=>{
+                    const itemElement = document.createElement("div");
+                    itemElement.classList.add("item");
+                    itemElement.innerHTML = `<a href="item.html">
+                    <div class="items d-flex align-items-center px-0 mb-3 data-item-index="${index}"">
+                      <img src="${filter.recipe.image}" alt="burgers" width="55" height="61" class="image-fluid">
+                      <p class="ms-3">${filter.recipe.label}</p>
+                    </div>
+                    </a>
+                  `;
+                    // Attaching the click event listener to each item element
+                    itemElement.addEventListener("click", ()=>{
+                        // Accessing the exact array item using the index
+                        const clickedItem = filteredResults[index];
+                        localStorage.setItem("clickedItem", JSON.stringify(clickedItem));
+                        console.log("Clicked item:", clickedItem);
+                    });
+                    dishes.appendChild(itemElement);
+                });
+                filterItem.innerHTML = `
+        <button id="removeFilter" class="btn  rounded border border-1 border-orange">
+        Remove ${filterValue} filter
+        </button>
+        `;
+            }
+            renderfilterResults();
+        } else if (filteredResults.length === 0) {
+            let filterValue = event.target.getAttribute("data-value");
+            dishes.innerHTML = `
+      <div class="container">
+      <p class="fst-italic">
+      no match found.
+      </p>
+      </div>
+      `;
+            filterItem.innerHTML = `
+      <button id="removeFilter" class="btn rounded border border-1 border-orange">
+      Remove ${filterValue} filter
+      </button>
+      `;
+        } else console.log("array length cannot be less than 0");
+    });
+});
+//when no match is found remove filter and render saved search results
+filterItem.addEventListener("click", ()=>{
+    let foodData = JSON.parse(localStorage.getItem("responseData")); //saved search results
+    dishes.innerHTML = ``;
+    foodData.hits.forEach((hit, index)=>{
+        const itemElement = document.createElement("div");
+        itemElement.classList.add("item");
+        itemElement.innerHTML = `<a href="item.html">
+                <div class="items d-flex align-items-center px-0 mb-3 data-item-index="${index}"">
+                  <img src="${hit.recipe.image}" alt="burgers" width="55" height="61" class="image-fluid">
+                  <p class="ms-3">${hit.recipe.label}</p>
+                </div>
+                </a>
+              `;
+        // Attaching the click event listener to each item element
+        itemElement.addEventListener("click", ()=>{
+            // Accessing the exact array item using the index
+            const clickedItem = foodData.hits[index];
+            localStorage.setItem("clickedItem", JSON.stringify(clickedItem));
+            console.log("Clicked item:", clickedItem);
+        });
+        dishes.appendChild(itemElement);
+    });
+    filterItem.innerHTML = ``; // to remove filter button
+});
 
 },{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["e3oKv","h0PEt"], "h0PEt", "parcelRequireac83")
 

@@ -575,7 +575,7 @@ searchButton.addEventListener("click", (event)=>{
         alert("Please enter a search term");
     }
 });
-// To get value of a clicked category 
+// To get value of a clicked category
 function getValue(event) {
     clickedItem = event.target;
     const item = clickedItem.getElementsByClassName("category");

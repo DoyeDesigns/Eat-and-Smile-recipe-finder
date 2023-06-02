@@ -39,4 +39,10 @@ a {
   padding-bottom: .4375rem;
 }
 
+@media (width <= 600px) {
+  #logo {
+    width: 9.375rem;
+  }
+}
+
 /*# sourceMappingURL=item.07fedde6.css.map */

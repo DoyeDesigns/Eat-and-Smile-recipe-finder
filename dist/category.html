@@ -1,35 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/index.574ca136.js"></script>
+  <head><script src="/index.59c67d00.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Finder</title>
     <link rel="stylesheet" href="/item.4717fcfd.css">
     <link rel="stylesheet" href="/item.07fedde6.css">
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <div class="text-center mb-4">
-          <a href="/index.html">
-            <h1>
-              <span class="text-orange">Eat and Smile</span><sub class="fs-6">Recipe Finder</sub>
-            </h1>
-          </a>
-        </div>
-      </nav>
+      <div class="mb-4">
+          <div class="text-center">
+            <a href="/index.html">
+              <img src="/EAT%20AND%20SMILE.3dbd83cd.svg" alt="logo" height="auto" width="250" class="d-inline" id="logo">
+            </a>
+          </div>
+      </div>
+    </nav>
     <main>
-        <section>
-            <div class="container">
-                <h2 class="mb-3">Popular <span id="clickedCategory" class="text-orange"></span> Dishes</h2>
-
-                <div id="dishes">
-                    <!-- render dishes -->
-                </div>
+      <section>
+        <div class="container">
+          <div class="d-flex justify-content-between">
+            <h2 class="mb-3">
+              Popular
+              <span id="clickedCategory" class="text-orange"></span> Dishes
+            </h2>
+            <div class="d-flex">
+              <div id="filterItem" class="me-2"></div>
+              <div class="dropdown">
+                <button class="btn btn-white dropdown-toggle text-black" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Sort by
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="filter dropdown-item" href="#" data-value="breakfast">Breakfast</a>
+                  </li>
+                  <li>
+                    <a class="filter dropdown-item" href="#" data-value="brunch">Brunch</a>
+                  </li>
+                  <li>
+                    <a class="filter dropdown-item" href="#" data-value="lunch/dinner">Lunch/Dinner</a>
+                  </li>
+                  <li>
+                    <a class="filter dropdown-item" href="#" data-value="snack">Snack</a>
+                  </li>
+                  <li>
+                    <a class="filter dropdown-item" href="#" data-value="teatime">Teatime</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </section>
+          </div>
+          <h1 id="numOfResults" class="mb-3 fs-6"></h1>
+          <div id="dishes">
+            <!-- render dishes -->
+          </div>
+        </div>
+      </section>
     </main>
     <script src="/category.8dfc199d.js" defer=""></script>
     <script src="/item.cc073436.js"></script>
-</body>
+  </body>
 </html>

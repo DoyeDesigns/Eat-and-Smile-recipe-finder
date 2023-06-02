@@ -122,7 +122,6 @@ const observer = new MutationObserver(() => {
   } else {
     numOfResults.textContent = `${numOfItems} Results`;
   }
-  
 });
 
 observer.observe(searchResults, { childList: true });
@@ -169,7 +168,6 @@ filters.forEach((filter) => {
         `;
       }
       renderfilterResults();
-
     } else if (filteredResults.length === 0) {
       let filterValue = event.target.getAttribute("data-value");
       searchResults.innerHTML = `
@@ -185,14 +183,13 @@ filters.forEach((filter) => {
       Remove ${filterValue} filter
       </button>
       `;
-
     } else {
       console.log("array length cannot be less than 0");
     }
   });
 });
 
-//when no match is found remove remove filter and render saved search results
+//when no match is found remove filter and render saved search results
 filterItem.addEventListener("click", () => {
   let foodData = JSON.parse(localStorage.getItem("responseData")); //saved search results
   searchResults.innerHTML = ``;

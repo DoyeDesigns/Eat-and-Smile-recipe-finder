@@ -45,3 +45,11 @@ a {
   border: none;
   border-bottom: 0.1875rem solid black;
 }
+
+/* mobile */
+@media (max-width: 600px) {
+  #logo {
+    width: 9.375rem;
+  }
+}
+
