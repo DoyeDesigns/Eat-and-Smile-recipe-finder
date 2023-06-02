@@ -577,7 +577,7 @@ searchButton.addEventListener("click", (event)=>{
 });
 // To get value of a clicked category
 function getValue(event) {
-    clickedItem = event.target;
+    let clickedItem = event.target;
     const item = clickedItem.getElementsByClassName("category");
     console.log(item);
     let searchValue = item[0].innerHTML;
@@ -608,9 +608,9 @@ const foodData = async ()=>{
                 `;
                 // Attaching the click event listener to each item element
                 itemElement.addEventListener("click", ()=>{
-                    const clickedItem1 = response.data.hits[index]; // Access the exact array item using the index
-                    localStorage.setItem("clickedItem", JSON.stringify(clickedItem1));
-                    console.log("Clicked item:", clickedItem1);
+                    const clickedItem = response.data.hits[index]; // Access the exact array item using the index
+                    localStorage.setItem("clickedItem", JSON.stringify(clickedItem));
+                    console.log("Clicked item:", clickedItem);
                 });
                 discoverNew.appendChild(itemElement);
             });

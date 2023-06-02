@@ -20,7 +20,7 @@ searchButton.addEventListener("click", (event) => {
 
 // To get value of a clicked category
 function getValue(event) {
-  clickedItem = event.target;
+  let clickedItem = event.target;
   const item = clickedItem.getElementsByClassName("category");
   console.log(item);
   let searchValue = item[0].innerHTML;
