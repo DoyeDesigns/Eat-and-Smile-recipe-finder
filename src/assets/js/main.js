@@ -20,20 +20,6 @@ searchButton.addEventListener("click", (event) => {
 });
 
 // To get value of a clicked category 
-// category.forEach((category) => {
-//   category.addEventListener("click", (event) =>{
-//     console.log("edoye")
-//     let clickedItem = event.target;
-//   const item = clickedItem.getElementsByClassName("category");
-//   console.log(item);
-//   let searchValue = item[0].innerHTML;
-//   console.log(searchValue);
-//   localStorage.setItem("searchValue", searchValue);
-//   })
-// })
-
-
-
 function getValue(event) {
   let clickedItem = event.target;
   const item = clickedItem.getElementsByClassName("category");
