@@ -1,4 +1,4 @@
-const searchValue = localStorage.getItem("searchValue");
+const searchValue = JSON.parse(localStorage.getItem("searchValue"));
 const clickedCategory = document.querySelector("#clickedCategory");
 const dishes = document.querySelector("#dishes");
 const filters = document.querySelectorAll(".filter");

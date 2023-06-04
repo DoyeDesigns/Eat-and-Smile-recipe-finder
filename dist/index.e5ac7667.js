@@ -565,7 +565,8 @@ const searchInput = document.querySelector("#searchInput");
 const searchResults = document.querySelector("#results");
 const discoverNew = document.getElementById("discover");
 const rowContainer = document.querySelector("#rowContainer");
-// seach button event listener
+const category = document.querySelectorAll("category");
+// search button event listener
 searchButton.addEventListener("click", (event)=>{
     const searchTerm = searchInput.value;
     console.log("Search term:", searchTerm);
@@ -575,14 +576,25 @@ searchButton.addEventListener("click", (event)=>{
         alert("Please enter a search term");
     }
 });
-// To get value of a clicked category
+// To get value of a clicked category 
+// category.forEach((category) => {
+//   category.addEventListener("click", (event) =>{
+//     console.log("edoye")
+//     let clickedItem = event.target;
+//   const item = clickedItem.getElementsByClassName("category");
+//   console.log(item);
+//   let searchValue = item[0].innerHTML;
+//   console.log(searchValue);
+//   localStorage.setItem("searchValue", searchValue);
+//   })
+// })
 function getValue(event) {
     let clickedItem = event.target;
     const item = clickedItem.getElementsByClassName("category");
     console.log(item);
     let searchValue = item[0].innerHTML;
     console.log(searchValue);
-    localStorage.setItem("searchValue", searchValue);
+    localStorage.setItem("searchValue", JSON.stringify(searchValue));
 }
 rowContainer.addEventListener("click", getValue);
 // Rendering random food on page load in the discover new div

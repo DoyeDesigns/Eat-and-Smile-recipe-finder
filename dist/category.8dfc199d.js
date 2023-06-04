@@ -560,7 +560,7 @@ function hmrAccept(bundle, id) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
-const searchValue = localStorage.getItem("searchValue");
+const searchValue = JSON.parse(localStorage.getItem("searchValue"));
 const clickedCategory = document.querySelector("#clickedCategory");
 const dishes = document.querySelector("#dishes");
 const filters = document.querySelectorAll(".filter");
