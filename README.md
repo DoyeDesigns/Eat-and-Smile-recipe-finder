@@ -44,10 +44,10 @@ Live link - https://foodrecipe-finder-web-app-doyedesigns.netlify.app/index.html
 
 ![Desktop view](/images/desktop%20view.png)
 
-![Desktop view](/images/desktop view 2.png)
+![Desktop view](/images/desktop%20view%202.png)
 
-![Desktop view](/images/desktop view 4.png)
+![Desktop view](/images/desktop%20view%204.png)
 
-![Desktop view](/images/desktop view 3.png)
+![Desktop view](/images/desktop%20view%203.png)
 
 
