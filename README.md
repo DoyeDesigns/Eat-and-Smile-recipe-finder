@@ -1,5 +1,6 @@
 # Eat and Smile recipe finder web app
-This is a web application built using HTML, CSS, and javascript. 
+
+### This is a web application built using HTML, CSS, and javascript. 
 
 This project was an eye-opener for me. I got to understand how to manipulate the DOM using javascript. I also learnt how to fetch data from APIs and render the information in the DOM(Document Object Model)) using backticks. 
 
@@ -17,9 +18,11 @@ It is a recipe finder web app. It allows users to search for various food recipe
 - Filters
 - Dropdown menu   
 
-## Tech stack utilized
+## Tech stack and buid tool utilized
 
 - Html
+- CSS
+- Sass
 - Bootstrap
 - Javascript
 - Parcel build tool
@@ -30,15 +33,21 @@ Live link - https://foodrecipe-finder-web-app-doyedesigns.netlify.app/index.html
 ## Mobile view
 
 `<div style="display: flex;">
-  <img src="/images/home.jpg" alt="Image 1" width="200" height="600" style="margin-right: 10px;"/>
-  <img src="/images/search.jpg" alt="Image 2" width="200" height="600" style="margin-right: 10px;"/>
-  <img src="/images/filter.jpg" alt="Image 1" width="200" height="600" style="margin-right: 10px;"/>
-  <img src="/images/items.jpg" alt="Image 2" width="200" height="600" style="margin-right: 10px;"/>
+  <img src="/images/home.jpg" alt="Image 1" width="200" height="400" style="margin-right: 10px;"/>
+  <img src="/images/search.jpg" alt="Image 2" width="200" height="400" style="margin-right: 10px;"/>
+  <img src="/images/filter.jpg" alt="Image 1" width="200" height="400" style="margin-right: 10px;"/>
+  <img src="/images/items.jpg" alt="Image 2" width="200" height="400" style="margin-right: 10px;"/>
 </div>
 `
 
 ## Desktop view
 
 ![Desktop view](/images/desktop%20view.png)
+
+![Desktop view](/images/desktop view 2.png)
+
+![Desktop view](/images/desktop view 4.png)
+
+![Desktop view](/images/desktop view 3.png)
 
 
