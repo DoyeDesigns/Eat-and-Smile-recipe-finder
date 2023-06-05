@@ -3,7 +3,6 @@ const searchInput = document.querySelector("#searchInput");
 const searchResults = document.querySelector("#results");
 const discoverNew = document.getElementById("discover");
 const rowContainer = document.querySelector("#rowContainer");
-const category = document.querySelectorAll("category");
 
 import axios from "axios";
 

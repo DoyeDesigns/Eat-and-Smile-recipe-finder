@@ -64,7 +64,7 @@
                   height="61"
                   class="image-fluid"
                 />
-                <p class="category ms-3 text-break">American</p>
+                <p class="category ms-3 text-break" onclick="getMe(event)">American</p>
               </div>
             </a>
           </div>
@@ -73,7 +73,7 @@
               <div
                 class="categories d-flex justify-content-between align-items-center px-0"
               >
-                <p class="category ms-3 text-break">Asian</p>
+                <p class="category ms-3 text-break" onclick="getMe(event)">Asian</p>
                 <img
                   src="../images/Hot soup on a hot day is all good! Spicy miso broth with udon, shrimp, dumplings and more udon! @tabushabu 🍲🦐🥟.jpeg"
                   alt="miso broth dumplings"
@@ -94,7 +94,7 @@
                   height="61"
                   class="image-fluid"
                 />
-                <p class="category ms-3 text-break">British</p>
+                <p class="category ms-3 text-break" onclick="getMe(event)">British</p>
               </div>
             </a>
           </div>
@@ -103,7 +103,7 @@
               <div
                 class="categories d-flex justify-content-between align-items-center px-0"
               >
-                <p class="category ms-3 text-break">Chinese</p>
+                <p class="category ms-3 text-break" onclick="getMe(event)">Chinese</p>
                 <img
                   src="../images/Sweet and Sour Pork - best ever!.png"
                   alt="sweet and sour pork"
@@ -124,7 +124,7 @@
                   height="61"
                   class="image-fluid"
                 />
-                <p class="category ms-3 text-break">French</p>
+                <p class="category ms-3 text-break" onclick="getMe(event)">French</p>
               </div>
             </a>
           </div>
@@ -133,7 +133,7 @@
               <div
                 class="categories d-flex justify-content-between align-items-center px-0"
               >
-                <p class="category ms-3 text-break">Italian</p>
+                <p class="category ms-3 text-break" onclick="getMe(event)">Italian</p>
                 <img
                   src="../images/Spaghetti Carbonara – Kelsey Nixon.jpeg"
                   alt="spaghetti carbonara"
@@ -154,7 +154,7 @@
                   height="61"
                   class="image-fluid"
                 />
-                <p class="category ms-3 text-break">Japanese</p>
+                <p class="category ms-3 text-break" onclick="getMe(event)">Japanese</p>
               </div>
             </a>
           </div>
@@ -163,7 +163,7 @@
               <div
                 class="categories d-flex justify-content-between align-items-center px-0"
               >
-                <p class="category ms-3 text-break">Mexican</p>
+                <p class="category ms-3 text-break" onclick="getMe(event)">Mexican</p>
                 <img
                   src="../images/Rectangle 7.jpg"
                   alt="tacos"
@@ -178,6 +178,15 @@
         </div>
       </section>
     </main>
+    <script>
+    // to get value of category text if clicked on
+    function getMe(event) {
+    let clickedElement = event.target;
+    searchValue = clickedElement.innerHTML;
+    localStorage.setItem("searchValue", JSON.stringify(searchValue));
+    console.log(searchValue);
+    }
+    </script>
     <script type="module" src="/src/assets/js/main.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
   </body>

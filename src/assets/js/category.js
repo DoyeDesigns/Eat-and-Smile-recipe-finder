@@ -43,16 +43,16 @@ let renderSearchResults = () => {
 
             dishes.appendChild(itemElement);
           });
-        }
+        };
         renderResults();
       } catch (error) {
         console.log(error);
-      }
+      };
     };
 
     searchData();
     console.log("Performing search for:", searchValue);
-  }
+  };
 };
 
 renderSearchResults();
@@ -64,7 +64,7 @@ const observer = new MutationObserver(() => {
     numOfResults.textContent = `${numOfItems} Result`;
   } else {
     numOfResults.textContent = `${numOfItems} Results`;
-  }
+  };
 });
 
 observer.observe(dishes, { childList: true });
@@ -128,7 +128,7 @@ filters.forEach((filter) => {
       `;
     } else {
       console.log("array length cannot be less than 0");
-    }
+    };
   });
 });
 

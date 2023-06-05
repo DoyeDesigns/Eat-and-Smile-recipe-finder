@@ -565,7 +565,6 @@ const searchInput = document.querySelector("#searchInput");
 const searchResults = document.querySelector("#results");
 const discoverNew = document.getElementById("discover");
 const rowContainer = document.querySelector("#rowContainer");
-const category = document.querySelectorAll("category");
 // search button event listener
 searchButton.addEventListener("click", (event)=>{
     const searchTerm = searchInput.value;
@@ -577,17 +576,6 @@ searchButton.addEventListener("click", (event)=>{
     }
 });
 // To get value of a clicked category 
-// category.forEach((category) => {
-//   category.addEventListener("click", (event) =>{
-//     console.log("edoye")
-//     let clickedItem = event.target;
-//   const item = clickedItem.getElementsByClassName("category");
-//   console.log(item);
-//   let searchValue = item[0].innerHTML;
-//   console.log(searchValue);
-//   localStorage.setItem("searchValue", searchValue);
-//   })
-// })
 function getValue(event) {
     let clickedItem = event.target;
     const item = clickedItem.getElementsByClassName("category");

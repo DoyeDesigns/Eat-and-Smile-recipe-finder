@@ -30,10 +30,10 @@ Live link - https://foodrecipe-finder-web-app-doyedesigns.netlify.app/index.html
 ## Mobile view
 
 `<div style="display: flex;">
-  <img src="/images/home.jpg" alt="Image 1" width="400" style="margin-right: 4px;"/>
-  <img src="/images/search.jpg" alt="Image 2" width="400" style="margin-right: 4px;"/>
-  <img src="/images/filter.jpg" alt="Image 1" width="400" style="margin-right: 4px;"/>
-  <img src="/images/items.jpg" alt="Image 2" width="400" style="margin-right: 4px;"/>
+  <img src="/images/home.jpg" alt="Image 1" width="200" height="600" style="margin-right: 10px;"/>
+  <img src="/images/search.jpg" alt="Image 2" width="200" height="600" style="margin-right: 10px;"/>
+  <img src="/images/filter.jpg" alt="Image 1" width="200" height="600" style="margin-right: 10px;"/>
+  <img src="/images/items.jpg" alt="Image 2" width="200" height="600" style="margin-right: 10px;"/>
 </div>
 `
 
