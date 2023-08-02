@@ -50,8 +50,11 @@ Welcome to the Google of recipes! This web-based application allows you to searc
 
 - Responsive design using Bootstrap.
 - Search bar: The website includes a powerful and user-friendly search bar that allows users to quickly find their desired recipes. Users can enter specific keywords, ingredients, or recipe names, and the search functionality will return relevant results from the recipe database.
+  
 - Edamam food recipe API: The website leverages the Edamam food recipe API, a comprehensive database of recipes from around the world. This API provides access to a vast collection of recipes, each with detailed information, ingredients, nutritional data, and cooking instructions.
+  
 - Filters: To enhance the user experience, the website incorporates various filters that help users refine their recipe searches. Users can narrow down results by dietary preferences, cuisine types, brunch, preparation time, and more.
+  
 - Dropdown menu: The dropdown menu provides easy navigation to recipe categories.
 
 ## Technologies Used
