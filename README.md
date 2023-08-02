@@ -1,24 +1,60 @@
 # Eat and Smile recipe finder web app
-
-### This is a web application built using HTML, CSS, and javascript. 
-
-This project was an eye-opener for me. I got to understand how to manipulate the DOM using javascript. I also learnt how to fetch data from APIs and render the information in the DOM(Document Object Model)) using backticks. 
-
-While building, I needed to store the user's search terms somewhere I could access them across different pages, so  I learnt how to save items temporarily and retrieve them from local storage. 
-
-I forgot to mention, Error handling. I learnt how to use the "try and catch" statements to handle errors. I learnt a lot because I faced a lot of challenges. Some were sweet some were not.
-
-It is a recipe finder web app. It allows users to search for various food recipes to prepare at home. It displays the ingredients you need and a link to a website that tells you how to prepare the meal. It also provides additional information like the time to prepare the meal.
+Welcome to the Google of recipes! This web-based application allows you to search for recipes across the world. If you want to try something new to eat you should definitely give Eat and Smile a try.
 
 
-## Website features
+---
 
-- Search bar
-- Edamam food recipe API
-- Filters
-- Dropdown menu   
+## Table of Contents
 
-## Tech stack and buid tool utilized
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Screenshots](#screenshots)
+  - [Mobile view](#mobile-view)
+  - [Desktop view](#desktop-view)
+
+## Getting Started
+
+### Installation
+  
+1. Clone the repository:
+
+   ```
+   git clone https://github.com/your-username/repository-name.git
+   ```
+
+3. Move into the project directory:
+
+   ```
+   cd repository-name
+   ```
+
+4. Install dependencies:
+
+   ```
+   npm install
+   ```
+
+6. Start the development server:
+
+   - Open a new terminal and type in the code below
+
+     ```
+     npm run dev
+     ```
+
+   The frontend development server will run on `http://localhost:3000`.
+
+## Features
+
+- Responsive design using Bootstrap.
+- Search bar: The website includes a powerful and user-friendly search bar that allows users to quickly find their desired recipes. Users can enter specific keywords, ingredients, or recipe names, and the search functionality will return relevant results from the recipe database.
+- Edamam food recipe API: The website leverages the Edamam food recipe API, a comprehensive database of recipes from around the world. This API provides access to a vast collection of recipes, each with detailed information, ingredients, nutritional data, and cooking instructions.
+- Filters: To enhance the user experience, the website incorporates various filters that help users refine their recipe searches. Users can narrow down results by dietary preferences, cuisine types, brunch, preparation time, and more.
+- Dropdown menu: The dropdown menu provides easy navigation to recipe categories.
+
+## Technologies Used
 
 - Html
 - CSS
@@ -27,7 +63,7 @@ It is a recipe finder web app. It allows users to search for various food recipe
 - Javascript
 - Parcel build tool
 
-## Links
+## Screenshots
 Live link - https://foodrecipe-finder-web-app-doyedesigns.netlify.app/index.html
 
 ## Mobile view
@@ -51,3 +87,18 @@ Live link - https://foodrecipe-finder-web-app-doyedesigns.netlify.app/index.html
 ![Desktop view](/images/desktop%20view%203.png)
 
 
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to the project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b your-feature-branch`
+3. Make your changes and commit them: `git commit -m "Add your message here"`
+4. Push to the branch: `git push origin your-feature-branch`
+5. Submit a pull request.
+
+---
+
+Replace your-username and your-mern-vite-app with your GitHub username and project repository name, respectively.
+
+In this README file, I've included instructions on how to set up the project, features, technologies used, and how to contribute. It provides a comprehensive guide for other developers to replicate the project and start contributing.
