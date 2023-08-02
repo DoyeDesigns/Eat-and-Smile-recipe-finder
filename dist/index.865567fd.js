@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"kSTZu":[function(require,module,exports) {
+})({"8FKQS":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -1536,7 +1536,7 @@ var _axiosErrorJsDefault = parcelHelpers.interopDefault(_axiosErrorJs);
 // temporary hotfix to avoid circular references until AxiosURLSearchParams is refactored
 var _formDataJs = require("../platform/node/classes/FormData.js");
 var _formDataJsDefault = parcelHelpers.interopDefault(_formDataJs);
-var Buffer = require("204ee99b1050b7a3").Buffer;
+var Buffer = require("4c05ed3a96419a62").Buffer;
 "use strict";
 /**
  * Determines if the given thing is a array or js object.
@@ -1691,15 +1691,15 @@ const predicates = (0, _utilsJsDefault.default).toFlatObject((0, _utilsJsDefault
 }
 exports.default = toFormData;
 
-},{"204ee99b1050b7a3":"fCgem","../utils.js":"5By4s","../core/AxiosError.js":"3u8Tl","../platform/node/classes/FormData.js":"aFlee","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fCgem":[function(require,module,exports) {
+},{"4c05ed3a96419a62":"fCgem","../utils.js":"5By4s","../core/AxiosError.js":"3u8Tl","../platform/node/classes/FormData.js":"aFlee","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fCgem":[function(require,module,exports) {
 /*!
  * The buffer module from node.js, for the browser.
  *
  * @author   Feross Aboukhadijeh <https://feross.org>
  * @license  MIT
  */ /* eslint-disable no-proto */ "use strict";
-var base64 = require("4d4defc8a608cc9e");
-var ieee754 = require("9391dca7156d354");
+var base64 = require("b31a57ab1205b99a");
+var ieee754 = require("2b37327dfafc4642");
 var customInspectSymbol = typeof Symbol === "function" && typeof Symbol["for"] === "function" // eslint-disable-line dot-notation
  ? Symbol["for"]("nodejs.util.inspect.custom") // eslint-disable-line dot-notation
  : null;
@@ -2921,7 +2921,7 @@ var hexSliceLookupTable = function() {
     return table;
 }();
 
-},{"4d4defc8a608cc9e":"eIiSV","9391dca7156d354":"cO95r"}],"eIiSV":[function(require,module,exports) {
+},{"b31a57ab1205b99a":"eIiSV","2b37327dfafc4642":"cO95r"}],"eIiSV":[function(require,module,exports) {
 "use strict";
 exports.byteLength = byteLength;
 exports.toByteArray = toByteArray;
@@ -4715,6 +4715,6 @@ Object.entries(HttpStatusCode).forEach(([key, value])=>{
 });
 exports.default = HttpStatusCode;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["kSTZu"], null, "parcelRequireac83")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["8FKQS"], null, "parcelRequireac83")
 
 //# sourceMappingURL=index.865567fd.js.map

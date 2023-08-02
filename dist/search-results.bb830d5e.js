@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"05id6":[function(require,module,exports) {
+})({"aZUOP":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -743,6 +743,6 @@ filterItem.addEventListener("click", ()=>{
     filterItem.innerHTML = ``; // to remove filter button
 });
 
-},{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["05id6","aFKZX"], "aFKZX", "parcelRequireac83")
+},{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["aZUOP","aFKZX"], "aFKZX", "parcelRequireac83")
 
 //# sourceMappingURL=search-results.bb830d5e.js.map

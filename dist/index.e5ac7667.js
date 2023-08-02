@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"4PWRH":[function(require,module,exports) {
+})({"bV5Z1":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -623,6 +623,6 @@ const foodData = async ()=>{
 };
 foodData();
 
-},{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["4PWRH","aitAD"], "aitAD", "parcelRequireac83")
+},{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["bV5Z1","aitAD"], "aitAD", "parcelRequireac83")
 
 //# sourceMappingURL=index.e5ac7667.js.map

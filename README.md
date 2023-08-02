@@ -44,7 +44,7 @@ Welcome to the Google of recipes! This web-based application allows you to searc
      npm run dev
      ```
 
-   The frontend development server will run on `http://localhost:3000`.
+   The frontend development server will run on `http://localhost:1234`.
 
 ## Features
 
